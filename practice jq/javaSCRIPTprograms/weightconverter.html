@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Weight Converter</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.atlasestateagents.co.uk/css/tether.min.css">
+
+    <style>
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-6 offset-3">
+          <h1 class="display-5 text-center mb-4 mt-10">Weight Converter</h1>
+          <form id="action_Form">
+            <div class="form-group"><input type="number" class="form-control form-control-lg" placeholder="Enter Pounds....." id="lbhInput"></div>
+          </form>
+          <div class="card card-primary mb-2">
+            <div class="card-block">
+              <h3>Grams</h3>
+              <div id="gramout"></div>
+            </div>
+          </div>
+          <div class="card card-success mb-2">
+            <div class="card-block">
+              <h3>KiloGrams</h3>
+              <div id="kgout"></div>
+            </div>
+
+          </div>
+          <div class="card card-danger mb-2">
+            <div class="card-block">
+              <h3>Ounces</h3>
+              <div id="ozout"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="footer text-center">Weight Converter App</div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="http://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!---script src="js/scripts.js"></script-->
+  </body>
+  <script type="text/javascript">
+    //  alert($('.card').css('visibility'))
+    window.onload = function() {
+      document.getElementById('action_Form').reset();
+    }
+    var x = document.getElementsByClassName("card");
+    for (var i = 0; i < x.length; i++) {
+      x[i].style.visibility = 'hidden';
+    }
+    document.getElementById('lbhInput').addEventListener('input', function(e) {
+      let lbs = e.target.value;
+      for (var i = 0; i < x.length; i++) {
+        x[i].style.visibility = 'visible';
+      }
+      document.getElementById('gramout').innerHTML = lbs / 0.0022046;
+      document.getElementById('kgout').innerHTML = lbs / 2.2046;
+      document.getElementById('ozout').innerHTML = lbs * 16.000;
+    });
+  </script>
+
+</html>

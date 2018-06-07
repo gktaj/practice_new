@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Dynamic List</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style-edit.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.atlasestateagents.co.uk/css/tether.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  </head>
+  <body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-2">
+          <h1 class="mb-4 mt-4">Dynamic List</h1>
+<ul class="list-group" id="listItems">
+  <li class="list-group-item">HTML5</li>
+  <li class="list-group-item">CSS3</li>
+  <li class="list-group-item">PHP7</li>
+  <li class="list-group-item">JQUERY</li>
+  <li class="list-group-item">JAVASCRIPT</li>
+
+</ul>
+<form>
+  <fieldset class="form-group mt-2 form-inline">
+    <input class="form-control mr-4" id="inputText" type="text">
+     <button type="button" class="btn btn-primary mr-2" id="addCont" onclick="addlist(this.innerHTML)"><i class="far fa-plus-square"></i> Add List</button>
+     <button type="button" class="btn btn-primary mr-2" id="editCont" onclick="editlist()"><i class="far fa-edit"></i> Edit List</button>
+     <button type="button" class="btn btn-primary" id="deleteCont" onclick="removelist()"><i class="far fa-trash-alt"></i> Delete List</button>
+  </fieldset>
+
+</form>
+    </div>
+  </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="http://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+var inputText =document.getElementById('inputText');
+var listItems=document.getElementById('listItems');
+var allItems=listItems.querySelectorAll('.list-group-item');
+var tab=[];
+var index;
+//var classN=["primary","success","danger"];
+
+function addlist() {
+
+  var newText=document.createTextNode(inputText.value);
+  var newNode=document.createElement('LI');
+  newNode.appendChild(newText);
+  newNode.classList="list-group-item";
+  listItems.appendChild(newNode);
+  refresh();
+  newNode.onclick=function() {
+    index=tab.indexOf(newNode.innerHTML);
+    console.log(newNode.innerHTML+" "+"index= "+index);
+  inputText.value=newNode.innerHTML;
+}
+//
+// var ctr = 0;
+// for (var i = 0; i < allItems.length; i++) {
+//   allItems[i].onclick =function(){
+//
+//
+//   }
+
+//  allItems[i].classList+=" "+classN[ctr];
+
+  // ctr = ctr + 1;
+  // if(ctr == 3){
+  //   ctr = 0;
+  // }
+
+//}
+
+}
+function selectlist(){
+for (var i = 0; i < allItems.length; i++) {
+  tab.push(allItems[i].innerHTML)
+}
+for (var i = 0; i < allItems.length; i++) {
+
+  allItems[i].onclick=function() {
+    index=tab.indexOf(this.innerHTML);
+    console.log(this.innerHTML+" "+"index= "+index);
+inputText.value=this.innerHTML;
+  }
+}
+
+}
+selectlist();
+  function refresh() {
+    tab.length =0;
+    allItems=listItems.querySelectorAll('.list-group-item');
+    for (var i = 0; i < allItems.length; i++) {
+      tab.push(allItems[i].innerHTML)
+    }
+  }
+function editlist() {
+    if (inputText.value != "" && inputText.value != "undefind") {
+allItems[index].innerHTML=inputText.value;
+refresh();
+}
+else {
+  alert("Please Select Atleast One");
+}
+
+}
+function removelist() {
+    refresh();
+
+    if (!(inputText.value == "" || inputText.value == "undefind")) {
+      alert("yes"+inputText.value);
+      if (allItems.length>0) {
+
+        allItems[index].parentNode.removeChild(allItems[index]);
+        inputText.value="";
+      }
+    }
+    else {
+      alert("Please Select Atleast One");
+    }
+
+
+}
+</script>
+  </body>
+
+</html>

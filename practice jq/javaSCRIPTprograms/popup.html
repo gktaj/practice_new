@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.atlasestateagents.co.uk/css/tether.min.css">
+
+
+    <style media="screen">
+      .modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1050;
+        display: none;
+        overflow: hidden;
+        outline: 0;
+
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+        -webkit-animation-name: fadeIn;
+        /* Fade in the background */
+        -webkit-animation-duration: 0.4s;
+        animation-name: fadeIn;
+        animation-duration: 0.4s
+      }
+
+      #modalContent {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        max-width: 991px;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        -webkit-animation-name: slideIn;
+        -webkit-animation-duration: 0.4s;
+        animation-name: slideIn;
+        animation-duration: 0.4s
+      }
+
+      .modalHeader,
+      .modalBody,
+      .modalFooter {
+        padding: 10px 15px;
+      }
+
+      .closeBtn {
+        padding: 10px;
+        float: right;
+        color: #333;
+        cursor: pointer;
+      }
+
+      .closeBtn:hover {
+        padding: 10px;
+        float: right;
+        color: #000;
+        cursor: pointer;
+      }
+
+      @-webkit-keyframes slideIn {
+        from {
+          top: -300px;
+          opacity: 0
+        }
+        to {
+          top: 50%;
+          opacity: 1
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          top: -300px;
+          opacity: 0
+        }
+        to {
+          top: 50%;
+          opacity: 1
+        }
+      }
+
+      @-webkit-keyframes fadeIn {
+        from {
+          opacity: 0
+        }
+        to {
+          opacity: 1
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0
+        }
+        to {
+          opacity: 1
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+          <p class="empty-holder mt-4"><button class="btn btn-default" id="modalOpener">Click Me</button></p>
+        </div>
+        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+          <p class="empty-holder">This is container where you can drop any elements</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal">
+      <div class="modalContent" id="modalContent">
+        <div class="modalHeader"><span class="closeBtn" id="closeBtn">X</span>
+          <h3>Modal header</h3></div>
+        <div class="modalBody">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modalFooter">
+          <h3>Modal Footer</h3></div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="http://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+
+  <script type="text/javascript">
+    var modalBtn = document.getElementById('modalOpener');
+    var modalMain = document.getElementById('modal');
+    var modalClose = document.getElementById('closeBtn');
+
+    modalBtn.addEventListener("click", openModal);
+
+    function openModal() {
+      modalMain.style.display = "block";
+    }
+    modalClose.addEventListener('click', closeModal);
+
+    function closeModal() {
+      modalMain.style.display = "none";
+    }
+    window.addEventListener('click', closeBody);
+
+    function closeBody(e) {
+      if (e.target == modalMain) {
+        modalMain.style.display = "none";
+      }
+    }
+  </script>
+
+</html>

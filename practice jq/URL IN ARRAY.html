@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<div id="imageContainer"></div>
+<body>
+<script>
+/*var imgs = ['http://lorempizza.com/380/240',
+            'http://dummyimage.com/250/ffffff/000000',
+            'http://lorempixel.com/g/400/200/',
+            'http://lorempixel.com/g/400/200/sports/'];
+var container = document.getElementById('imageContainer');
+var docFrag = document.createDocumentFragment();
+
+imgs.forEach(function(url, index, originalArray) {
+
+    var img = document.createElement('img');
+    img.src = url;
+    docFrag.appendChild(img);
+});
+
+
+container.appendChild(docFrag);
+
+var imgs = ['http://lorempizza.com/380/240',
+            'http://dummyimage.com/250/ffffff/000000',
+            'http://lorempixel.com/g/400/200/',
+            'http://lorempixel.com/g/400/200/sports/'];
+var container = document.getElementById('imageContainer');
+
+for (var i = 0, j = imgs.length; i < j; i++) {
+    var img = document.createElement('img');
+    img.src = imgs[i]; // img[i] refers to the current URL.
+    container.appendChild(img);
+}*/
+var urls = ['https://www.tutorialspoint.com/jquery/jquery-ajax.htm',
+'http://rindovincent.blogspot.in/p/javascript.html',
+'https://www.w3schools.com/js/js_examples.asp',
+'https://code.tutsplus.com/tutorials/24-javascript-best-practices-for-beginners--net-5399',
+'http://www.plus2net.com/jquery/msg-demo/validation-userid.php',
+'http://www.javascriptfreecode.com/18.htm',
+'http://www-k12.atmos.washington.edu/~ovens/javascript/jseg25.html',
+'http://www.tutorialspark.com/javascript/JavaScript_Create_Cookies.php','<br>',
+'https://yerevancoder.com/2018-02-21-js-arrays-and-objects/',
+'http://www.java2s.com/Code/JavaScript/Development/DisplaytheCurrentTimeinstatusbar.htm',
+'https://www.cdn.geeksforgeeks.org/javascript-tutorial/',
+'https://stackoverflow.com/questions/6208964/how-to-loop-over-an-array-with-javascript',
+'https://intuio.at/blog/dont-use-data-attributes-to-find-html-elements-with-js/',
+'https://coderwall.com/p/_ggh2w/the-array-native-every-filter-map-some-foreach-methods'];
+
+
+document.getElementById('imageContainer')
+        .innerHTML = '<a href="' + urls.join('" /><a href="') + '" />';
+
+var con=document.getElementById('imageContainer');
+var text=con.querySelectorAll("a")
+for(var i =0;i<text.length;i++){
+	text[i].innerHTML=text[i].href+"<br>";
+}
+
+
+</script>
+
+</body>
+</html>

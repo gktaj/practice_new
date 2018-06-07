@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<!--<link href="admin/css/styles.css" rel="stylesheet" type="text/css">
+<link href="admin/css/styles-rtl.css" rel="stylesheet" type="text/css">
+<link href="includes/css/styles.css" rel="stylesheet" type="text/css">
+<link href="includes/css/styles-rtl.css" rel="stylesheet" type="text/css">
+<link href="includes/js/jquery-ui/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+<link href="includes/js/jquery-ui/themes/smoothness/theme.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="admin/js/scripts.js" type="text/javascript"></script>
+<script src="admin/js/tag-generator.js" type="text/javascript"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="contact-form-editor">
+  <ul id="editor-tabs">
+    <li ><a href="#data1">Form</a></li>
+    <li ><a href="#data2">Mail</a></li>
+    <li><a href="#data3">Messages</a></li>
+    <li><a href="#data4">Additional Settings</a></li>
+  </ul>
+<div class="tab-main">  
+  <div class="editor-panel active" id="data1">
+    <div class="config-error"></div>
+    <h2>Form</h2>
+    <fieldset>
+      <legend>You can edit the form template here. For details, see <a href="https://contactform7.com/editing-form-template/">Editing Form Template</a>.</legend>
+      <span id="tag-generator-list"><a href="#TB_inline?width=900&height=500&inlineId=tag-generator-panel-text" class="thickbox button" title="Form-tag Generator: text">text</a><a href="#TB_inline?width=900&height=500&inlineId=tag-generator-panel-email" class="thickbox button" title="Form-tag Generator: email">email</a><a href="#TB_inline?width=900&height=500&inlineId=tag-generator-panel-url" class="thickbox button" title="Form-tag Generator: URL">URL</a><a href="#TB_inline?width=900&height=500&inlineId=tag-generator-panel-tel" class="thickbox button" title="Form-tag Generator: tel">tel</a><a href="#TB_inline?width=900&height=500&inlineId=tag-generator-panel-number" class="thickbox button" title="Form-tag Generator: number">number</a><a href="#TB_inline?width=900&height=500&inlineId=tag-generator-panel-date" class="thickbox button" title="Form-tag Generator: date">date</a><a href="#TB_inline?width=900&height=500&inlineId=tag-generator-panel-textarea" class="thickbox button" title="Form-tag Generator: text area">text area</a><a href="#TB_inline?width=900&height=500&inlineId=tag-generator-panel-menu" class="thickbox button" title="Form-tag Generator: drop-down menu">drop-down menu</a><a href="#TB_inline?width=900&height=500&inlineId=tag-generator-panel-checkbox" class="thickbox button" title="Form-tag Generator: checkboxes">checkboxes</a><a href="#TB_inline?width=900&height=500&inlineId=tag-generator-panel-radio" class="thickbox button" title="Form-tag Generator: radio buttons">radio buttons</a><a href="#TB_inline?width=900&height=500&inlineId=tag-generator-panel-acceptance" class="thickbox button" title="Form-tag Generator: acceptance">acceptance</a><a href="#TB_inline?width=900&height=500&inlineId=tag-generator-panel-quiz" class="thickbox button" title="Form-tag Generator: quiz">quiz</a><a href="#TB_inline?width=900&height=500&inlineId=tag-generator-panel-recaptcha" class="thickbox button" title="Form-tag Generator: reCAPTCHA">reCAPTCHA</a><a href="#TB_inline?width=900&height=500&inlineId=tag-generator-panel-file" class="thickbox button" title="Form-tag Generator: file">file</a><a href="#TB_inline?width=900&height=500&inlineId=tag-generator-panel-submit" class="thickbox button" title="Form-tag Generator: submit">submit</a></span>
+      <textarea id="wpcf7-form" name="wpcf7-form" cols="100" rows="24" class="large-text code" data-config-field="form.body">&lt;div class=&quot;form-group&quot;&gt;
+&lt;label for=&quot;email&quot;&gt;Your Email (required):&lt;/label&gt;
+[email* your-email class:form-control id:email]
+&lt;/div&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+&lt;label for=&quot;subject&quot;&gt;Subject:&lt;/label&gt;
+[text your-subject  class:form-control id:subject]
+&lt;/div&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+&lt;label for=&quot;Message&quot;&gt;Message:&lt;/label&gt;
+[textarea your-message  class:form-control id:Message]
+&lt;/div&gt;
+[submit class:btn class:btn-default &quot;Send Message&quot;]</textarea>
+    </fieldset>
+  </div>
+  <div class="editor-panel" id="data2">
+    <div class="config-error"></div>
+    <div class="contact-form-editor-box-mail" id="wpcf7-mail">
+      <h2>Mail</h2>
+      <fieldset>
+        <legend> You can edit the mail template here. For details, see <a href="https://contactform7.com/setting-up-mail/">Setting Up Mail</a>.<br />
+        In the following fields, you can use these mail-tags:<br />
+        <span class="mailtag code used">[your-email]</span><span class="mailtag code used">[your-subject]</span><span class="mailtag code used">[your-message]</span></legend>
+        <table class="form-table">
+          <tbody>
+            <tr>
+              <th scope="row"> <label for="wpcf7-mail-recipient">To</label>
+              </th>
+              <td><input type="text" id="wpcf7-mail-recipient" name="wpcf7-mail[recipient]" class="large-text code" size="70" value="revelationspi@aol.com" data-config-field="mail.recipient" /></td>
+            </tr>
+            <tr>
+              <th scope="row"> <label for="wpcf7-mail-sender">From</label>
+              </th>
+              <td><input type="text" id="wpcf7-mail-sender" name="wpcf7-mail[sender]" class="large-text code" size="70" value="[your-name] &lt;revelationspi@aol.com&gt;" data-config-field="mail.sender" /></td>
+            </tr>
+            <tr>
+              <th scope="row"> <label for="wpcf7-mail-subject">Subject</label>
+              </th>
+              <td><input type="text" id="wpcf7-mail-subject" name="wpcf7-mail[subject]" class="large-text code" size="70" value="southfloridapi &quot;[your-subject]&quot;" data-config-field="mail.subject" /></td>
+            </tr>
+            <tr>
+              <th scope="row"> <label for="wpcf7-mail-additional-headers">Additional Headers</label>
+              </th>
+              <td><textarea id="wpcf7-mail-additional-headers" name="wpcf7-mail[additional_headers]" cols="100" rows="4" class="large-text code" data-config-field="mail.additional_headers">Reply-To: [your-email]</textarea></td>
+            </tr>
+            <tr>
+              <th scope="row"> <label for="wpcf7-mail-body">Message Body</label>
+              </th>
+              <td><textarea id="wpcf7-mail-body" name="wpcf7-mail[body]" cols="100" rows="18" class="large-text code" data-config-field="mail.body">From: [your-name] &lt;[your-email]&gt;
+Subject: [your-subject]
+
+Message Body:
+[your-message]
+
+-- 
+This e-mail was sent from a contact form on southfloridapi (http://localhost/southfloridapi)</textarea>
+                <p>
+                  <label for="wpcf7-mail-exclude-blank">
+                    <input type="checkbox" id="wpcf7-mail-exclude-blank" name="wpcf7-mail[exclude_blank]" value="1" />
+                    Exclude lines with blank mail-tags from output</label>
+                </p>
+                <p>
+                  <label for="wpcf7-mail-use-html">
+                    <input type="checkbox" id="wpcf7-mail-use-html" name="wpcf7-mail[use_html]" value="1" />
+                    Use HTML content type</label>
+                </p></td>
+            </tr>
+            <tr>
+              <th scope="row"> <label for="wpcf7-mail-attachments">File Attachments</label>
+              </th>
+              <td><textarea id="wpcf7-mail-attachments" name="wpcf7-mail[attachments]" cols="100" rows="4" class="large-text code" data-config-field="mail.attachments"></textarea></td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+    </div>
+    <br class="clear" />
+    <div class="contact-form-editor-box-mail" id="wpcf7-mail-2">
+      <h2>Mail (2)</h2>
+      <label for="wpcf7-mail-2-active">
+        <input type="checkbox" id="wpcf7-mail-2-active" name="wpcf7-mail-2[active]" class="toggle-form-table" value="1" />
+        Use Mail (2)</label>
+      <p class="description">Mail (2) is an additional mail template often used as an autoresponder.</p>
+      <fieldset>
+        <legend> You can edit the mail template here. For details, see <a href="https://contactform7.com/setting-up-mail/">Setting Up Mail</a>.<br />
+        In the following fields, you can use these mail-tags:<br />
+        <span class="mailtag code used">[your-email]</span><span class="mailtag code used">[your-subject]</span><span class="mailtag code used">[your-message]</span></legend>
+        <table class="form-table">
+          <tbody>
+            <tr>
+              <th scope="row"> <label for="wpcf7-mail-2-recipient">To</label>
+              </th>
+              <td><input type="text" id="wpcf7-mail-2-recipient" name="wpcf7-mail-2[recipient]" class="large-text code" size="70" value="[your-email]" data-config-field="mail_2.recipient" /></td>
+            </tr>
+            <tr>
+              <th scope="row"> <label for="wpcf7-mail-2-sender">From</label>
+              </th>
+              <td><input type="text" id="wpcf7-mail-2-sender" name="wpcf7-mail-2[sender]" class="large-text code" size="70" value="southfloridapi &lt;gopalconnectinfo@gmail.com&gt;" data-config-field="mail_2.sender" /></td>
+            </tr>
+            <tr>
+              <th scope="row"> <label for="wpcf7-mail-2-subject">Subject</label>
+              </th>
+              <td><input type="text" id="wpcf7-mail-2-subject" name="wpcf7-mail-2[subject]" class="large-text code" size="70" value="southfloridapi &quot;[your-subject]&quot;" data-config-field="mail_2.subject" /></td>
+            </tr>
+            <tr>
+              <th scope="row"> <label for="wpcf7-mail-2-additional-headers">Additional Headers</label>
+              </th>
+              <td><textarea id="wpcf7-mail-2-additional-headers" name="wpcf7-mail-2[additional_headers]" cols="100" rows="4" class="large-text code" data-config-field="mail_2.additional_headers">Reply-To: gopalconnectinfo@gmail.com</textarea></td>
+            </tr>
+            <tr>
+              <th scope="row"> <label for="wpcf7-mail-2-body">Message Body</label>
+              </th>
+              <td><textarea id="wpcf7-mail-2-body" name="wpcf7-mail-2[body]" cols="100" rows="18" class="large-text code" data-config-field="mail_2.body">Message Body:
+[your-message]
+
+-- 
+This e-mail was sent from a contact form on southfloridapi (http://localhost/southfloridapi)</textarea>
+                <p>
+                  <label for="wpcf7-mail-2-exclude-blank">
+                    <input type="checkbox" id="wpcf7-mail-2-exclude-blank" name="wpcf7-mail-2[exclude_blank]" value="1" />
+                    Exclude lines with blank mail-tags from output</label>
+                </p>
+                <p>
+                  <label for="wpcf7-mail-2-use-html">
+                    <input type="checkbox" id="wpcf7-mail-2-use-html" name="wpcf7-mail-2[use_html]" value="1" />
+                    Use HTML content type</label>
+                </p></td>
+            </tr>
+            <tr>
+              <th scope="row"> <label for="wpcf7-mail-2-attachments">File Attachments</label>
+              </th>
+              <td><textarea id="wpcf7-mail-2-attachments" name="wpcf7-mail-2[attachments]" cols="100" rows="4" class="large-text code" data-config-field="mail_2.attachments"></textarea></td>
+            </tr>
+          </tbody>
+        </table>
+      </fieldset>
+    </div>
+  </div>
+  <div class="editor-panel" id="data3">
+    <div class="config-error"></div>
+    <h2>Messages</h2>
+    <fieldset>
+      <legend>You can edit messages used in various situations here. For details, see <a href="https://contactform7.com/editing-messages/">Editing Messages</a>.</legend>
+      <p class="description">
+        <label for="wpcf7-message-mail-sent-ok">Sender&#039;s message was sent successfully<br />
+          <input type="text" id="wpcf7-message-mail-sent-ok" name="wpcf7-messages[mail_sent_ok]" class="large-text" size="70" value="Thank you for your message. It has been sent." data-config-field="messages.mail_sent_ok" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-mail-sent-ng">Sender&#039;s message failed to send<br />
+          <input type="text" id="wpcf7-message-mail-sent-ng" name="wpcf7-messages[mail_sent_ng]" class="large-text" size="70" value="There was an error trying to send your message. Please try again later." data-config-field="messages.mail_sent_ng" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-validation-error">Validation errors occurred<br />
+          <input type="text" id="wpcf7-message-validation-error" name="wpcf7-messages[validation_error]" class="large-text" size="70" value="One or more fields have an error. Please check and try again." data-config-field="messages.validation_error" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-spam">Submission was referred to as spam<br />
+          <input type="text" id="wpcf7-message-spam" name="wpcf7-messages[spam]" class="large-text" size="70" value="There was an error trying to send your message. Please try again later." data-config-field="messages.spam" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-accept-terms">There are terms that the sender must accept<br />
+          <input type="text" id="wpcf7-message-accept-terms" name="wpcf7-messages[accept_terms]" class="large-text" size="70" value="You must accept the terms and conditions before sending your message." data-config-field="messages.accept_terms" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-invalid-required">There is a field that the sender must fill in<br />
+          <input type="text" id="wpcf7-message-invalid-required" name="wpcf7-messages[invalid_required]" class="large-text" size="70" value="The field is required." data-config-field="messages.invalid_required" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-invalid-too-long">There is a field with input that is longer than the maximum allowed length<br />
+          <input type="text" id="wpcf7-message-invalid-too-long" name="wpcf7-messages[invalid_too_long]" class="large-text" size="70" value="The field is too long." data-config-field="messages.invalid_too_long" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-invalid-too-short">There is a field with input that is shorter than the minimum allowed length<br />
+          <input type="text" id="wpcf7-message-invalid-too-short" name="wpcf7-messages[invalid_too_short]" class="large-text" size="70" value="The field is too short." data-config-field="messages.invalid_too_short" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-invalid-date">Date format that the sender entered is invalid<br />
+          <input type="text" id="wpcf7-message-invalid-date" name="wpcf7-messages[invalid_date]" class="large-text" size="70" value="The date format is incorrect." data-config-field="messages.invalid_date" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-date-too-early">Date is earlier than minimum limit<br />
+          <input type="text" id="wpcf7-message-date-too-early" name="wpcf7-messages[date_too_early]" class="large-text" size="70" value="The date is before the earliest one allowed." data-config-field="messages.date_too_early" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-date-too-late">Date is later than maximum limit<br />
+          <input type="text" id="wpcf7-message-date-too-late" name="wpcf7-messages[date_too_late]" class="large-text" size="70" value="The date is after the latest one allowed." data-config-field="messages.date_too_late" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-upload-failed">Uploading a file fails for any reason<br />
+          <input type="text" id="wpcf7-message-upload-failed" name="wpcf7-messages[upload_failed]" class="large-text" size="70" value="There was an unknown error uploading the file." data-config-field="messages.upload_failed" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-upload-file-type-invalid">Uploaded file is not allowed for file type<br />
+          <input type="text" id="wpcf7-message-upload-file-type-invalid" name="wpcf7-messages[upload_file_type_invalid]" class="large-text" size="70" value="You are not allowed to upload files of this type." data-config-field="messages.upload_file_type_invalid" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-upload-file-too-large">Uploaded file is too large<br />
+          <input type="text" id="wpcf7-message-upload-file-too-large" name="wpcf7-messages[upload_file_too_large]" class="large-text" size="70" value="The file is too big." data-config-field="messages.upload_file_too_large" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-upload-failed-php-error">Uploading a file fails for PHP error<br />
+          <input type="text" id="wpcf7-message-upload-failed-php-error" name="wpcf7-messages[upload_failed_php_error]" class="large-text" size="70" value="There was an error uploading the file." data-config-field="messages.upload_failed_php_error" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-invalid-number">Number format that the sender entered is invalid<br />
+          <input type="text" id="wpcf7-message-invalid-number" name="wpcf7-messages[invalid_number]" class="large-text" size="70" value="The number format is invalid." data-config-field="messages.invalid_number" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-number-too-small">Number is smaller than minimum limit<br />
+          <input type="text" id="wpcf7-message-number-too-small" name="wpcf7-messages[number_too_small]" class="large-text" size="70" value="The number is smaller than the minimum allowed." data-config-field="messages.number_too_small" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-number-too-large">Number is larger than maximum limit<br />
+          <input type="text" id="wpcf7-message-number-too-large" name="wpcf7-messages[number_too_large]" class="large-text" size="70" value="The number is larger than the maximum allowed." data-config-field="messages.number_too_large" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-quiz-answer-not-correct">Sender doesn&#039;t enter the correct answer to the quiz<br />
+          <input type="text" id="wpcf7-message-quiz-answer-not-correct" name="wpcf7-messages[quiz_answer_not_correct]" class="large-text" size="70" value="The answer to the quiz is incorrect." data-config-field="messages.quiz_answer_not_correct" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-invalid-email">Email address that the sender entered is invalid<br />
+          <input type="text" id="wpcf7-message-invalid-email" name="wpcf7-messages[invalid_email]" class="large-text" size="70" value="The e-mail address entered is invalid." data-config-field="messages.invalid_email" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-invalid-url">URL that the sender entered is invalid<br />
+          <input type="text" id="wpcf7-message-invalid-url" name="wpcf7-messages[invalid_url]" class="large-text" size="70" value="The URL is invalid." data-config-field="messages.invalid_url" />
+        </label>
+      </p>
+      <p class="description">
+        <label for="wpcf7-message-invalid-tel">Telephone number that the sender entered is invalid<br />
+          <input type="text" id="wpcf7-message-invalid-tel" name="wpcf7-messages[invalid_tel]" class="large-text" size="70" value="The telephone number is invalid." data-config-field="messages.invalid_tel" />
+        </label>
+      </p>
+    </fieldset>
+  </div>
+  <div class="editor-panel" id="data4">
+    <div class="config-error"></div>
+    <h2>Additional Settings</h2>
+    <fieldset>
+      <legend>You can add customization code snippets here. For details, see <a href="https://contactform7.com/additional-settings/">Additional Settings</a>.</legend>
+      <textarea id="wpcf7-additional-settings" name="wpcf7-additional-settings" cols="100" rows="8" class="large-text" data-config-field="additional_settings.body"></textarea>
+    </fieldset>
+  </div></div>
+</div>
+<!-- #contact-form-editor -->
+<style>
+#editor-tabs {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background: #eee;
+	border: 1px solid #ddd;
+}
+#editor-tabs li {
+	display:inline-block ;
+}
+
+#editor-tabs li a {
+	display: block;
+	padding: 6px 7px;
+	text-decoration: none;
+	color: #555;
+	border: 1px solid #ccc;
+}
+.editor-panel {
+	display: none;
+}
+.editor-panel.active {
+	display: block;
+}
+</style>
+<script>
+$("#editor-tabs li a").click(function(e){
+	e.preventDefault();
+	var th=$(this);
+	var tb =th.attr("href");
+	$(".tab-main .editor-panel[id]").removeClass("active");
+	$(".tab-main .editor-panel[id='"+tb.substr(1)+"']").addClass("active");
+});
+</script>
+</body>
+</html>

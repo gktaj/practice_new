@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body onload="showTime();">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+<form name="htmlClock">
+        <input type="text"
+               name="timeField"
+               size=14>
+               <button type="button" class="btn btn-primary" name="button" id="inputClick" onclick="timeCheck();">Click Me</button>
+             </form>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  function showTime() {
+  var timeNow = new Date();
+  var hours   = timeNow.getHours();
+  var minutes = timeNow.getMinutes();
+  var seconds = timeNow.getSeconds();
+  var timeString = "" + ((hours > 12) ? hours - 12 : hours);
+  timeString  += ((minutes < 10) ? ":0" : ":") + minutes;
+  timeString  += ((seconds < 10) ? ":0" : ":") + seconds;
+  timeString  += (hours >= 12) ? " P.M." : " A.M.";
+  document.htmlClock.timeField.value = timeString;
+  timerID = setTimeout("showTime()", 1000);
+}
+today   = new Date();
+minutes = today.getMinutes();
+if (minutes >=0 && minutes <= 30)
+   document.write("<body text=White bgcolor=Blue>"+dayPart());
+else
+   document.write("<body text=White bgcolor=Black>"+dayPart());
+
+   function dayPart() {
+    var oneDate = new Date();
+    var theHour = oneDate.getHours();
+    if (theHour < 12) {
+        return "morning";
+    } else if (theHour < 18) {
+        return "afternoon";
+    } else {
+        return "evening";
+    }
+}
+theList = [10, 15, 89, 30];
+for (let i in theList) {
+  console.log(theList[i]);
+}
+
+let products = [
+  { name: 'Running shoes', price: 75 },
+  { name: 'Golf shoes',    price: 85 },
+  { name: 'Dress shoes',   price: 95 },
+  { name: 'Walking shoes', price: 65 },
+  { name: 'Sandals',       price: 55 }
+];
+
+var x="";
+for (let i = 0; i < products.length; i++) {
+   x +="<li>" + products[i].name +" "+'<span>'+products[i].price+'</span></li>';
+}
+for (let i in products) {
+   x +="<li>" + products[i].name +" "+'<span>'+products[i].price+'</span></li>';
+}
+
+
+
+products.forEach((product, index) => {
+console.log(product.name +" "+product.price);
+});
+
+
+
+
+
+const items = [1, 29, 47];
+const copy = [];
+
+items.forEach(function(item){
+  copy.push(item*item);
+x +="<li>" + copy +'</span></li>';
+});
+
+//print(copy);
+for (let i in copy) {
+   x +="<li>" + copy[i] +'</span></li>';
+}
+document.write('<ul>'+x+'</ul>');
+  </script>
+
+</body>
+</html>

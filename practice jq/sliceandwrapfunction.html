@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="image-map-resizer-master/js/imageMapResizer.js"></script>
+<script src="jQuery-rwdImageMaps-master/jquery.rwdImageMaps1.js"></script>
+</head>
+
+<body>
+<div class="parent">
+        <div class="child">1</div>
+        <div  class="child">2</div>
+        <div  class="child">3</div>
+        <div  class="child">4</div>
+        <div  class="child">5</div>
+        <div  class="child">6</div>
+        <div  class="child">7</div>
+         <div  class="child">9</div>
+</div>
+	
+<script>
+$(document).ready(function(){
+/*var divs = $("div > div");
+for(var i = 0; i < divs.length; i+=3) {
+  divs.slice(i, i+3).wrapAll("<div class='new'></div>");
+}
+
+*/
+var mylist=function (count){
+	var divs = $("div > div");
+	for(i=0;i< divs.length;i+=count){
+	divs.slice(i,i+count).wrapAll("<div class='childrenGroup'></div>");;
+	}
+	
+}
+mylist(2);
+});
+</script>
+<style>
+.child {
+	background: #eee;
+	border: 1px solid #aaa;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+.childrenGroup {
+	border: 2px solid #bbb;
+	margin-bottom: 5px;
+}
+.childrenGroup >.child {
+	margin-bottom: 0px;
+}
+img {
+	width: 60%;
+}
+</style>
+</body>
+</html>

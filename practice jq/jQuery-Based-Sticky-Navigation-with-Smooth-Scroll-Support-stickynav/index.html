@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery stickynav Plugin Demo</title>
+<link href='https://fonts.googleapis.com/css?family=Lobster+Two:700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="stickynav.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div id="container">
+  <nav id="nav">
+    <ul>
+      <li><a id="nav_section1" class="active" href="#section_1">Section 1</a></li>
+      <li><a id="nav_section2" href="#section_2">Section 2</a></li>
+      <li><a id="nav_section3" href="#section_3">Section 3</a></li>
+      <li><a id="nav_section4" href="#section_4">Section 4</a></li>
+    </ul>
+  </nav>
+  <div class="section" id="section_1" style="color: #333333">
+    <h1>Section 1</h1>
+  </div>
+  <div class="section" id="section_2" style="color: #474747">
+    <h1>Section 2</h1>
+  </div>
+  <div class="section" id="section_3" style="color: #848484">
+    <h1>Section 3</h1>
+  </div>
+  <div class="section" id="section_4" style="color: #c1c1c1">
+    <h1>Section 4</h1>
+  </div>
+</div>
+<footer>
+  <h1>jQuery stickynav Plugin Demo</h1>
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<ul class="ulClassName" id="firstUL">
+ <li>Blah blah1 </li>
+ <li>Blah blah2 </li>
+ <li>Blah blah3 </li>
+ <li>Blah blah4 </li>
+ <li>Blah blah5 </li>
+ <li>Blah blah6 </li>
+</ul>
+<ul class="ulClassName" id="secondUL">
+ <li>Blah blah1 </li>
+ <li>Blah blah2 </li>
+ <li>Blah blah3 </li>
+ <li>Blah blah4 </li>
+ </ul>
+
+<script>
+/*var currentCount= 0;
+var maxCount= 3;
+$('.ulClassName').each(function() {
+   $(this).find('li').slice(currentCount, maxCount).css('display',"block");
+});*/
+function mufilter(currentCount,maxCount){
+	var ulClassName =$('.ulClassName li');
+$('.ulClassName').each(function() {
+   $(this).find('li').slice(currentCount, maxCount).css('display',"block");
+});
+};
+mufilter(0,3);
+</script>
+<style>
+.ulClassName li{
+	display:none;
+}
+</style>
+</body>
+</html>

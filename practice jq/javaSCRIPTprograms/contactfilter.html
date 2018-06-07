@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Contact Filter</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.atlasestateagents.co.uk/css/tether.min.css">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-6 offset-3">
+          <h1 class="display-5 text-center mb-4 mt-10">Contact Filter</h1>
+          <form id="action_Form">
+            <div class="form-group"><input type="text" class="form-control form-control-lg" placeholder="Enter Name....." id="NameInput"></div>
+          </form>
+
+          <ul class="list-group" id="nameList">
+            <li class="list-group-item listheader">
+              <h4>A</h4>
+            </li>
+            <li class="list-group-item">
+              <a href="#">Adele</a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">Agnes</a>
+            </li>
+            <li class="list-group-item listheader">
+              <h4>B</h4>
+            </li>
+            <li class="list-group-item">
+              <a href="#">Billy</a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">Bob</a>
+            </li>
+            <li class="list-group-item listheader">
+              <h4>C</h4>
+            </li>
+            <li class="list-group-item">
+              <a href="#">Calvin</a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">Christina</a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">Cindy</a>
+            </li>
+            <li class="list-group-item listheader">
+              <h4>D</h4>
+            </li>
+            <li class="list-group-item">
+              <a href="#">Diff</a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">Dona</a>
+            </li>
+            <li class="list-group-item">
+              <a href="#">David</a>
+            </li>
+          </ul>
+          
+
+        </div>
+      </div>
+      <div class="footer text-center mt-4">Contact Filter</div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="http://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!---script src="js/scripts.js"></script-->
+  </body>
+  <script type="text/javascript">
+    let inputInput = document.getElementById('NameInput');
+
+    let ul = document.getElementById("nameList");
+    ul.style.display = "none";
+    let li = ul.querySelectorAll('li.list-group-item:not(.listheader)');
+
+    for (let i = 0; i < li.length; i++) {
+      let a = li[i].getElementsByTagName('a')[0];
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        inputInput.value = e.target.innerHTML;
+        ul.style.display = "none";
+      });
+    }
+
+    inputInput.addEventListener("keyup", listGroup);
+
+    function listGroup() {
+      ul.style.display = "block";
+      let inputFilter = document.getElementById('NameInput').value.toUpperCase();
+      console.log(inputFilter);
+
+      // let liHead = ul.querySelectorAll('.listheader');
+      //
+      //
+      // for (var i = 0; i < liHead.length; i++) {
+      //   let htag = liHead[i].getElementsByTagName('h4')[0];
+      //   if (htag.innerHTML.toUpperCase().indexOf(inputFilter) > -1) {
+      //     liHead[i].style.display = "block";
+      //   } else {
+      //     liHead[i].style.display = "none";
+      //   }
+      // }
+
+
+      for (let i = 0; i < li.length; i++) {
+        let a = li[i].getElementsByTagName('a')[0];
+        if (a.innerHTML.toUpperCase().indexOf(inputFilter) > -1) {
+          li[i].style.display = "block";
+        } else {
+          li[i].style.display = "none";
+        }
+
+      }
+
+    }
+  </script>
+
+</html>

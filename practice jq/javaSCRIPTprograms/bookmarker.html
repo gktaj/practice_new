@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bookmarker App</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.atlasestateagents.co.uk/css/tether.min.css">
+
+
+  </head>
+  <body onLoad="fetchbookmark()">
+
+    <div class="container">
+    
+    <div class="header clearfix">
+    <h1>Bookmarker App</h1>
+    
+    </div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron">
+				<h2>
+					Bookmark My  URLS
+				</h2>
+				<form role="form" id="actionForm">
+				<div class="form-group">
+					 
+					<label for="websiteName">
+						Website Name
+					</label>
+					<input class="form-control" id="websiteName" type="text">
+				</div>
+				<div class="form-group">
+					 
+					<label for="websiteUrl">
+						Website Urls
+					</label>
+					<input class="form-control" id="websiteUrl" type="text">
+				</div>
+				
+				 
+				<button type="submit" class="btn btn-primary">
+					Submit
+				</button>
+			</form>
+				
+			</div>
+			
+			<div class="card bg-info " id="bookmarkResult">
+				<div class="card-header">
+					Card title <a href="#" class="btn btn-info">Visit</a> <a href="#" class="btn btn-danger">delete</a>
+				</div>
+				
+				
+			</div>
+			
+		</div>
+	</div>
+    <div class="footer">Bookmarker App</div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+       <script src="http://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+ 
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
