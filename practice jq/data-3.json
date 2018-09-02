@@ -1,0 +1,56 @@
+ [
+    {
+      "color": "Purple",
+      "category": "hue",
+      "type": "primary",
+      "code": {
+        "rgba": [128, 0, 128,1],
+        "hex": "#800080"
+      }
+    },
+    {
+      "color": "Fuchsia",
+      "category": "value",
+      "code": {
+        "rgba": [255, 0, 255,1],
+        "hex": "#FF00FF"
+      }
+    },
+    {
+      "color": "Navy",
+      "category": "hue",
+      "type": "primary",
+      "code": {
+        "rgba": [0, 0, 128,1],
+        "hex": "#000080"
+      }
+    },
+    {
+      "color": "Teal",
+      "category": "hue",
+      "type": "primary",
+      "code": {
+        "rgba": [0, 128, 128,1],
+        "hex": "#008080"
+      }
+    },
+    {
+      "color": "Aqua",
+      "category": "hue",
+      "type": "primary",
+      "code": {
+        "rgba": [0, 255, 255,1],
+        "hex": "#00FFFF"
+      }
+    },
+    {
+      "color": "Olive",
+      "category": "hue",
+      "type": "secondary",
+      "code": {
+        "rgba": [128, 128, 0,1],
+        "hex": "#808000"
+      }
+    },
+  ]
+
